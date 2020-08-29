@@ -25,9 +25,19 @@ create-react-app frontend
 ```
 OR
 ```sh
-npx create-react-app frontend
+  # Create a new app Frontend
+  npx create-react-app frontend
+
+  # Starts the development server.
+  yarn start
+
+  # Bundles the app into static files for production.
+  yarn build
+
+  # Starts the test runner.
+  yarn test
 ```
 ### uninstall the create-react-app globally
 ```sh
-npm uninstall -g create-react-app
+  npm uninstall -g create-react-app
 ```
