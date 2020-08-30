@@ -1,0 +1,13 @@
+# Define the base image
+FROM node
+
+# Change application directory to /app
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# copy the source code
+COPY . .
+# Run application in local environment
+CMD ["npm", "run", "start"]

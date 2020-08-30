@@ -41,3 +41,19 @@ OR
 ```sh
   npm uninstall -g create-react-app
 ```
+
+### Create a development Environment using Docckerfile.dev by using current working directory as docker volume
+
+```sh
+# Linux based terminal
+  docker build -f Dockerfile.dev . -t front-end
+  docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app front-end
+
+# commands for powershell
+  docker build -f Dockerfile.dev . -t front-end
+  docker run -it -p 3000:3000 -v /app/node_modules -v ${PWD}:/app CHOKIDAR_USEPOOLING=true front-end
+```
+### uninstall the create-react-app globally
+```sh
+  npm uninstall -g create-react-app
+```
